@@ -38,12 +38,21 @@ public class zadania {
 
         int mediana;
         if (ilePrzedmiotow % 2 == 0){
-            mediana = (tablicaOcen[ilePrzedmiotow / 2-1] + tablicaOcen[ilePrzedmiotow]) /2;
+            mediana = ((tablicaOcen[ilePrzedmiotow / 2-1] + tablicaOcen[ilePrzedmiotow/2+1]) /2 );
         }
         else{
             mediana= tablicaOcen[ilePrzedmiotow / 2];
         }
         System.out.println("\n Mediana ocen to  :" + mediana );
+
+        //wyswietlanie wproawdzonych ocen
+        System.out.println("Wprowadzone oceny to:");
+
+        for (int i=0; i<ilePrzedmiotow; i++)
+        {
+            System.out.println("\n Ocena " + i + " to: " + tablicaOcen[i]);
+        }
+        System.out.println("\n a ich suma to: " + sumaOcen );
         scanner.close();
     }
 }
