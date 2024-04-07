@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.Arrays;
+
 
 public class zadania {
     public static void main(String[] args) {
@@ -28,6 +30,20 @@ public class zadania {
 
         System.out.print("srednia ocen to: " + srednia);
 
+        //sortowanie liczb w tablicy
+
+        Arrays.sort(tablicaOcen);
+
+        //Obliczanie mediany
+
+        int mediana;
+        if (ilePrzedmiotow % 2 == 0){
+            mediana = (tablicaOcen[ilePrzedmiotow / 2-1] + tablicaOcen[ilePrzedmiotow]) /2;
+        }
+        else{
+            mediana= tablicaOcen[ilePrzedmiotow / 2];
+        }
+        System.out.println("\n Mediana ocen to  :" + mediana );
         scanner.close();
     }
 }
