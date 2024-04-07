@@ -38,7 +38,7 @@ public class zadania {
 
         int mediana;
         if (ilePrzedmiotow % 2 == 0){
-            mediana = (tablicaOcen[ilePrzedmiotow / 2-1] + tablicaOcen[ilePrzedmiotow]) /2;
+            mediana = (tablicaOcen[ilePrzedmiotow / 2-1] + tablicaOcen[ilePrzedmiotow / 2+1]) /2;
         }
         else{
             mediana= tablicaOcen[ilePrzedmiotow / 2];
