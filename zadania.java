@@ -11,11 +11,21 @@ public class zadania {
 
         //deklaracja tablicy w ktorej bedziemy trzymac oceny
             int [] tablicaOcen =new int[ilePrzedmiotow];
+
             
         //powtorzenie petli tyle ile uzytkownik wprowadzil x
-        for (int i=0; i<ilePrzedmiotow; i++){
+        for (int i=0; i<ilePrzedmiotow;){
             System.out.print("Podaj oceny z przedmiotu " + (i + 1) + ": ");
-            tablicaOcen[i] = scanner.nextInt();
+            int ocena;
+            ocena = scanner.nextInt();
+        if (ocena > 0 && ocena < 6){
+            tablicaOcen[i] = ocena;
+            i++;
+        }
+        else{
+            System.out.println("Ocena musi byc dodatnia i mniejsza od 6, popraw \n");
+            
+        }
         }
         // zliczanie wszystkich danych z tablicy
          int sumaOcen = 0;
